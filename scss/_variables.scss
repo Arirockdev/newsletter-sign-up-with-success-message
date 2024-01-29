@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+$fontFamily: 'Roboto';
+
+// Colors
+
+// Primary
+
+$tomato: hsl(4, 100%, 67%);
+
+
+//Neutral
+
+$dark-slate-grey: hsl(234, 29%, 20%);
+$charcoal-grey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+// Espaciados
+
+// paddings
+
+$padding10: 1rem;
+$padding15: 1.5rem;
+$padding20: 2rem;
+$padding25: 2.5rem;
+$padding30: 3rem;
+$padding35: 3.5rem;
+$padding40: 4rem;
+$padding45: 4.5rem;
+$padding10: 5rem;
+
+// margins
+
+$marging10: 1rem;
+$marging15: 1.5rem;
+$marging20: 2rem;
+$marging25: 2.5rem;
+$marging30: 3rem;
+$marging35: 3.5rem;
+$marging40: 4rem;
+$marging45: 4.5rem;
+$marging50: 5rem;

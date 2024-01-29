@@ -1,0 +1,16 @@
+@function radius($radius){
+  @return $radius
+};
+
+@function margin($margin){
+  @return $margin
+};
+
+@function padding($padding){
+  @return $padding
+};
+
+
+@function color ($color){
+  @return $color
+}

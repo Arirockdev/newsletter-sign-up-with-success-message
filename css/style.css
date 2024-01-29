@@ -1,0 +1,424 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto";
+}
+
+.img__container {
+  width: 100%;
+  height: 300px;
+  background-image: url(../assets/images/illustration-sign-up-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-clip: content-box;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.container__gral {
+  padding: 2rem;
+}
+
+.text {
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: clamp(4rem, 2vw + 1rem, 4.5rem);
+  color: hsl(234, 29%, 20%);
+  font-weight: 9010;
+}
+
+p {
+  font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
+  margin-top: 2rem;
+  font-weight: 500;
+  color: hsl(234, 29%, 20%);
+}
+
+.list {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 5px;
+}
+
+.list__item {
+  list-style: none;
+  background: url(../assets/images/icon-list.svg) no-repeat transparent;
+  background-position: left 6px;
+  background-size: 20px;
+  list-style-position: outside;
+  font-size: calc(2vw + 0.8rem);
+  padding: 5px 0px 5px 35px;
+  vertical-align: middle;
+  margin-top: 15px;
+  color: hsl(234, 29%, 20%);
+  font-weight: 600;
+}
+
+.email__div {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+}
+
+.label {
+  font-size: calc(1vw + 0.9rem);
+  font-weight: 900;
+  color: hsl(234, 29%, 20%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.input {
+  margin-top: 1rem;
+  padding: 2rem;
+  border: 1px solid hsl(231, 7%, 60%);
+  font-size: 1.6rem;
+  font-family: "Roboto";
+  font-weight: 600;
+  border-radius: 10px;
+  outline: none;
+}
+
+.input:focus {
+  border: none;
+  border: 1px solid hsl(235, 18%, 26%);
+  cursor: pointer;
+}
+
+.input:hover {
+  cursor: pointer;
+}
+
+.input::placeholder {
+  color: hsl(231, 7%, 60%);
+  padding: 5px;
+  font-weight: 500;
+}
+
+.btn {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  outline: none;
+}
+
+.btn:hover {
+  background: hsl(4, 100%, 67%);
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.5rem;
+}
+footer .attribution a {
+  color: hsl(4, 100%, 67%);
+  font-weight: 900;
+  outline: none;
+}
+
+/* 
+? Container de enviado
+*/
+.exit__msg {
+  padding: 2.5rem;
+  margin-top: 80px;
+}
+.exit__msg .btn {
+  margin-top: 200px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.container__text {
+  margin-top: 3.5rem;
+}
+.container__text h1 {
+  font-size: 4.2rem;
+  font-weight: 900;
+}
+.container__text p {
+  line-height: 2.8rem;
+  font-weight: 500;
+}
+.container__text p span {
+  font-weight: 900;
+}
+
+.alert {
+  color: hsl(4, 100%, 67%);
+}
+
+.input-active:focus {
+  border: none;
+  border: 1px solid hsl(4, 100%, 67%);
+  cursor: pointer;
+  color: red;
+}
+
+.active {
+  display: none;
+}
+
+@media screen and (min-width: 860px) {
+  body {
+    background: hsl(235, 18%, 26%);
+  }
+  main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    grid-template-areas: "container-gral container-img" "container-gral container-img";
+    align-items: center;
+    background: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    width: 90%;
+  }
+  .img__container {
+    grid-area: container-img;
+    height: 90%;
+    width: 80%;
+    background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .container__gral {
+    grid-area: container-gral;
+    padding: 4.5rem;
+    margin: auto;
+  }
+  h1 {
+    font-size: calc(0.5vw + 4.5rem);
+  }
+  p {
+    font-size: calc(0.5vw + 1rem);
+  }
+  .list__item {
+    font-size: calc(0.5vw + 1rem);
+  }
+  .label {
+    font-size: calc(0.5vw + 0.5rem);
+  }
+  .container__img {
+    width: 80%;
+    margin: auto;
+  }
+  .exit__msg {
+    padding: 30px;
+    width: 500px;
+    height: auto;
+    border: 1px solid black;
+    background: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 100px;
+  }
+  .exit__msg #btn-dis {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80%;
+  }
+  .exit__msg p {
+    margin-top: 10px;
+    margin: 0 auto;
+    font-size: calc(0.5vw + 1rem);
+    width: 80%;
+    font-weight: 500;
+  }
+  h1 {
+    margin: auto;
+    font-weight: 900;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  footer {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1260px) {
+  body {
+    background: hsl(235, 18%, 26%);
+  }
+  main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    grid-template-areas: "container-gral container-img" "container-gral container-img";
+    align-items: center;
+    background: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    width: 70%;
+  }
+  .img__container {
+    grid-area: container-img;
+    height: 90%;
+    width: 80%;
+    background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .container__gral {
+    grid-area: container-gral;
+    padding: 4.5rem;
+    margin: auto;
+  }
+  h1 {
+    font-size: calc(0.5vw + 4.5rem);
+  }
+  p {
+    font-size: calc(0.5vw + 1rem);
+  }
+  .list__item {
+    font-size: calc(0.5vw + 1rem);
+  }
+  .label {
+    font-size: calc(0.5vw + 0.5rem);
+  }
+}
+@media screen and (min-width: 1860px) {
+  body {
+    background: hsl(235, 18%, 26%);
+  }
+  main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    grid-template-areas: "container-gral container-img" "container-gral container-img";
+    align-items: center;
+    background: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    width: 90%;
+  }
+  .img__container {
+    grid-area: container-img;
+    height: 90%;
+    width: 80%;
+    background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .container__gral {
+    grid-area: container-gral;
+    padding: 4.5rem;
+    margin: auto;
+  }
+  h1 {
+    font-size: calc(0.5vw + 4.5rem);
+  }
+  p {
+    font-size: calc(0.5vw + 1rem);
+  }
+  .list__item {
+    font-size: calc(0.5vw + 1rem);
+  }
+  .label {
+    font-size: calc(0.5vw + 0.5rem);
+  }
+}
+@media screen and (min-width: 1860px) {
+  body {
+    background: hsl(235, 18%, 26%);
+  }
+  main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    grid-template-areas: "container-gral container-img" "container-gral container-img";
+    align-items: center;
+    background: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    width: 60%;
+  }
+  .img__container {
+    grid-area: container-img;
+    height: 90%;
+    width: 80%;
+    background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .container__gral {
+    grid-area: container-gral;
+    padding: 4.5rem;
+    margin: auto;
+  }
+  h1 {
+    font-size: calc(0.5vw + 4.5rem);
+  }
+  p {
+    font-size: calc(0.5vw + 1rem);
+  }
+  .list__item {
+    font-size: calc(0.5vw + 1rem);
+  }
+  .label {
+    font-size: calc(0.5vw + 0.5rem);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

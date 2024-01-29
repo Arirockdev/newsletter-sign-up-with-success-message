@@ -1,0 +1,472 @@
+@use './resets' as *;
+@use './variables' as *;
+@use './mixins' as *;
+@use './functions' as *;
+
+
+
+
+
+.img__container {
+  @include size(100%, 300px);
+  background-image: url(../assets/images/illustration-sign-up-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-clip: content-box;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+ 
+
+.container__gral {
+  padding: padding($padding20);
+}
+
+.text {
+  margin-top: $marging20;
+}
+
+h1{
+  font-size: clamp(4rem, 2vw + 1rem, 4.5rem);
+  color: color($dark-slate-grey);
+  font-weight: 9010;
+}
+
+p {
+  font-size: clamp(1rem, 2vw +  1rem, 2.5rem);
+  margin-top: $marging20;
+  font-weight: 500;
+  color: color($dark-slate-grey);
+}
+
+.list {
+  margin-top: $marging30; 
+  margin-bottom: $marging15;
+  padding-bottom: 5px;
+}
+
+.list__item {
+  list-style: none;
+  background: url(../assets/images/icon-list.svg) no-repeat transparent;
+  background-position: left 6px;
+  background-size: 20px;
+  list-style-position: outside;
+  font-size: calc(2vw + .8rem);
+  padding: 5px 0px 5px 35px;
+  vertical-align: middle;
+  margin-top: 15px; 
+  color: color($dark-slate-grey);
+  font-weight: 600;
+}
+
+.email__div{
+  margin-top: $marging40;
+  @include displayFlex(flex, column, auto, auto);
+}
+
+.label {
+  font-size: calc(1vw + .9rem);
+  font-weight: 900;
+  color: color($dark-slate-grey); 
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.input {
+  margin-top: $marging10;
+  padding: $padding20;
+  border: 1px solid color($grey);
+  font-size: 1.6rem;
+  font-family: $fontFamily;
+  font-weight: 600;
+  border-radius: radius(10px);
+  outline: none;
+}
+.input:focus {
+  border: none;
+  border: 1px solid color($charcoal-grey);
+  cursor: pointer;  
+}
+.input:hover{
+  cursor: pointer;
+}
+
+.input::placeholder{
+  color: color($grey);
+  padding: 5px;
+  font-weight: 500;
+}
+
+.btn {
+  margin-top: $marging20;
+  padding: $padding20	;
+  background: color($dark-slate-grey);
+  color: color($white);
+  border: none;
+  border-radius: radius(10px);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  outline: none;
+}
+.btn:hover{
+  background: color($tomato);
+  cursor: pointer;
+}
+footer{
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.5rem;
+  & .attribution a{
+    color: color($tomato);
+    font-weight: 900;
+    outline: none;
+  }
+}
+
+
+/* 
+? Container de enviado
+*/
+
+
+
+.exit__msg{
+  padding: $padding25;
+  margin-top: 80px;
+  & .btn{
+    margin-top: 200px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+  }
+}
+
+.container__text{
+  margin-top: $marging35;
+  & h1{
+    font-size: 4.2rem;
+    font-weight: 900;
+    
+  }
+  & p{
+    line-height: 2.8rem;
+    font-weight: 500;
+  }
+
+  & p span{
+    font-weight: 900;
+  }
+    
+}
+
+.alert{
+  color: color($tomato);
+}
+
+
+
+.input-active:focus {
+  border: none;
+  border: 1px solid color($tomato);
+  cursor: pointer;  
+  color: red;
+}
+
+
+
+
+
+.active {
+  display: none;
+}
+
+
+
+// media Responsive
+
+
+
+
+
+@media screen and (min-width:860px){
+  body {
+    background: color($charcoal-grey);
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    grid-template-areas: 
+    'container-gral container-img'
+    'container-gral container-img';
+    align-items: center;
+    background: color($white);
+    border-radius: radius(20px);
+    width: 90%;
+  }
+
+
+  .img__container{
+    grid-area: container-img;
+    height: 90%;
+    width: 80%;
+    background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto; 
+    border-radius: 10px;
+  }
+  
+ 
+  .container__gral{
+    grid-area: container-gral;
+    padding: $padding45;
+    margin: auto;
+  }
+
+  h1{
+    font-size: calc(.5vw + 4.5rem);
+  }
+  p {
+    font-size: calc(.5vw + 1rem);
+  }
+
+  
+
+  .list__item {
+    font-size: calc(.5vw + 1rem);
+  }
+
+  .label {
+    font-size: calc(.5vw + .5rem);
+  }
+
+  .container__img{
+    width: 80%;
+    margin: auto;
+  }
+
+ .exit__msg{
+    padding: 30px;
+    width: 500px;
+    height: auto;
+    border: 1px solid black;
+    background: color($white);
+    border-radius: radius(20px);
+    margin: auto;
+    margin-top: 100px;
+    & #btn-dis {
+      margin: 0 auto;
+      margin-top: 50px;
+      width: 80%;
+    }
+    & p{
+      margin-top: 10px;
+      margin: 0 auto;
+      font-size: calc(.5vw + 1rem);
+      width: 80%;
+      font-weight: 500;
+    }
+  }
+  h1 {
+    margin: auto;
+    font-weight: 900;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+
+  footer {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 80%;
+  }  
+  
+}
+
+
+@media screen and (min-width:1260px){
+  body {
+    background: color($charcoal-grey);
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    grid-template-areas: 
+    'container-gral container-img'
+    'container-gral container-img';
+    align-items: center;
+    background: color($white);
+    border-radius: radius(20px);
+    width: 70%;
+  }
+
+
+  .img__container{
+    grid-area: container-img;
+    height: 90%;
+    width: 80%;
+    background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto; 
+    border-radius: 10px;
+  }
+  
+ 
+  .container__gral{
+    grid-area: container-gral;
+    padding: $padding45;
+    margin: auto;
+  }
+
+  h1{
+    font-size: calc(.5vw + 4.5rem);
+  }
+  p {
+    font-size: calc(.5vw + 1rem);
+  }
+
+  
+
+  .list__item {
+    font-size: calc(.5vw + 1rem);
+  }
+
+  .label {
+    font-size: calc(.5vw + .5rem);
+  }
+}
+
+
+@media screen and (min-width:1860px){
+  body {
+    background: color($charcoal-grey);
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    grid-template-areas: 
+    'container-gral container-img'
+    'container-gral container-img';
+    align-items: center;
+    background: color($white);
+    border-radius: radius(20px);
+    width: 90%;
+  }
+
+
+  .img__container{
+    grid-area: container-img;
+    height: 90%;
+    width: 80%;
+    background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto; 
+    border-radius: 10px;
+  }
+  
+ 
+  .container__gral{
+    grid-area: container-gral;
+    padding: $padding45;
+    margin: auto;
+  }
+
+  h1{
+    font-size: calc(.5vw + 4.5rem);
+  }
+  p {
+    font-size: calc(.5vw + 1rem);
+  }
+
+  
+
+  .list__item {
+    font-size: calc(.5vw + 1rem);
+  }
+
+  .label {
+    font-size: calc(.5vw + .5rem);
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 1860px){
+  body {
+    background: color($charcoal-grey);
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    grid-template-areas: 
+    'container-gral container-img'
+    'container-gral container-img';
+    align-items: center;
+    background: color($white);
+    border-radius: radius(20px);
+    width: 60%;
+  }
+
+
+  .img__container{
+    grid-area: container-img;
+    height: 90%;
+    width: 80%;
+    background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto; 
+    border-radius: 10px;
+  }
+  
+ 
+  .container__gral{
+    grid-area: container-gral;
+    padding: $padding45;
+    margin: auto;
+  }
+
+  h1{
+    font-size: calc(.5vw + 4.5rem);
+  }
+  p {
+    font-size: calc(.5vw + 1rem);
+  }
+
+  
+
+  .list__item {
+    font-size: calc(.5vw + 1rem);
+  }
+
+  .label {
+    font-size: calc(.5vw + .5rem);
+  }
+}
